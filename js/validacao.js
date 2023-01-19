@@ -1,3 +1,5 @@
+
+alert("Aqui passouj")
 const dataNascimento = document.querySelector('#nascimento')
 
 dataNascimento.addEventListener('load', (evento) => {
