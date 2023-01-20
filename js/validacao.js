@@ -1,7 +1,8 @@
 const dataNascimento = document.querySelector('#nascimento')
 
-dataNascimento.addEventListener('load', (evento) => {
-     validacaoDataNascimento(evento.target)
+// ALTERAÇÃO DO EVENTO (LOAD -> BLUR)
+dataNascimento.addEventListener('blur', (evento) => {
+    validacaoDataNascimento(evento.target)
 })
 
 function validacaoDataNascimento(input) {
@@ -13,6 +14,8 @@ function validacaoDataNascimento(input) {
     }
 
     input.setCustomValidity(mensagem)
+    // ENVIANDO A MENSAGEM PARA O HTML POR UM <p>
+    document.getElementById('teste').innerHTML =  input.validationMessage
 }
 
 function maiorDe18(data) {
